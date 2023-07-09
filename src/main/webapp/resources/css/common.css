@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+/*초기화*/
+body,h1,h2,h3,h4,h5,h6,ul,p,img,input{margin: 0; padding: 0;}
+li{list-style: none;}
+a{text-decoration: none;  color: #000;}
+.hidden{position: absolute; left: -9999px;}
+
+/*side_menu*/
+.sidebar{  
+  position: fixed;  top: 0;  left: 0;  width: 250px;   height: 100%;   background-color: #fff; }
+.sidebar .companyName{/*border: 1px solid #999;*/ text-align: center; padding: 50px;  font-weight: bold; margin: 8px;
+font-size: 1.8em; background-color: #617787; border-radius: 3px; letter-spacing: 5px;}
+.sidebar .companyName a{color: #fff;}
+.side_menu{}
+.side_menu .depth1 {margin-bottom: 50px;}
+.side_menu .depth1 span{cursor:default; padding: 3px; margin-left: 5px; font-weight: bold; border-bottom: 3px solid #999;}
+.side_menu .depth1 ul li a{display: inline-block; margin: 10px 0px 10px 30px;}
+.side_menu a:hover{  color: #fff;background-color: #333; }
+
+
+/*body*/
+#body{padding-left: 250px; width: 100%; /*border: 2px solid red;*/ }
+#body p{}
+#body .main_image{margin: 0 auto; text-align: center; /*border: 2px solid purple; */
+  width: 100%;background-color: #d0dce5;}
+#body .main_image img{width: 1100px; height: 650px;}
+#body .main_info{text-align: center; font-size: 1.2em; margin: -30px auto 0px;
+width: 55%; border-radius: 5px; background-color: #f8f8f8; position: relative;
+padding: 12px 0px; cursor: default; letter-spacing: -1.2px;
+box-shadow: 0 15px 30px 0 rgba(0,0,0,0.1)}
+
+#body .link_zone{margin-top: 5.5%; width: 100%; display: flex; justify-content: center; align-items: flex-end;}
+#body .link_zone ul{}
+#body .link_zone ul li{float: left; margin-right: 125px;}
+#body .link_zone ul li a{display: inline-block;text-align: center;}
+#body .link_zone ul li a:before {  content: '';  display: block;  margin: 0 auto 6px;  width: 60px;  height: 60px;  }
+#body .link_zone ul li:nth-child(1) a:before {
+  background: url(/src/main/webapp/resources/images/icon/free-icon-bank-916769.png) no-repeat 0 0; 
+  background-size: 60px;
+}
+#body .link_zone ul li:nth-child(2) a:before {
+  background: url(/src/main/webapp/resources/images/icon/free-icon-piggy-bank-584093.png) no-repeat 0 0;
+  background-size: 60px;
+}
+#body .link_zone ul li:nth-child(3) a:before {
+  background: url(/src/main/webapp/resources/images/icon/free-icon-passbook-2447436.png) no-repeat 0 0;
+  background-size: 60px;
+}
+
+#body .link_zone ul li:nth-child(1):before {
+  content: '';
+  display: inline-block;
+  position: relative;
+  left: 123px;
+  top: -12px;
+  width: 1px;
+  height: 71px;
+  background: #e3e3e3;
+}
+
+#body .link_zone ul li:nth-child(2):before {
+  content: '';
+  display: inline-block;
+  position: relative;
+  left: 123px;
+  top: -12px;
+  width: 1px;
+  height: 71px;
+  background: #e3e3e3;
+}

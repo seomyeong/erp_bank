@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라임ERP</title>
+    <link rel="stylesheet" href="/src/main/webapp/resources/css/common.css">
+    <script src="/src/main/webapp/resources/js/common.js"></script>    
+    <script src="/src/main/webapp/resources/js/jquery-3.6.0.min.js"></script>    
+</head>
+<script>
+    $(document).ready(function(){
+        $('#header').load("/src/main/webapp/WEB-INF/views/includes/header.html");
+        $('#side_menu').load("/src/main/webapp/WEB-INF/views/includes/side_menu.html");
+        $('#footer').load("/src/main/webapp/WEB-INF/views/includes/footer.html");
+    });
+</script>
+<body>
+    
+    <div id="header"></div>
+    <div id="side_menu"></div>
+    <div id="body">
+        <div class="main_image">
+            <img src="/src/main/webapp/resources/images/main_5.png">
+        </div>
+        <div class="main_info">
+            바로ERP는 별도의 인터넷뱅킹 접속 없이 업무솔루션(ERP)에서 <br>
+            조회 및 이체(계좌이체, 급여이체) 등 금융업무를 바로 이용할 수 있는 서비스입니다.
+        </div>  
+        <div class="link_zone">
+            <ul>
+                <li><a href="#">조회</a></li>
+                <li><a href="#">이체</a></li>
+                <li><a href="#">매출관리</a></li>
+            </ul>
+        </div>    
+    </div>
+    <div id="footer"></div>
+</body>
+</html>
