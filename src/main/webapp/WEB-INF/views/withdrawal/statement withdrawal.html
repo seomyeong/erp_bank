@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라임ERP</title>
+    <link rel="stylesheet" href="/src/main/webapp/resources/css/common.css">
+    <script src="/src/main/webapp/resources/js/common.js"></script>    
+    <script src="/src/main/webapp/resources/js/jquery-3.6.0.min.js"></script>    
+</head>
+<script>
+    $(document).ready(function(){
+        $('#header').load("/src/main/webapp/WEB-INF/views/includes/header.html");
+        $('#side_menu').load("/src/main/webapp/WEB-INF/views/includes/side_menu.html");
+        $('#footer').load("/src/main/webapp/WEB-INF/views/includes/footer.html");
+    });
+</script>
+<body>
+    
+    <div id="header"></div>
+    <div id="side_menu"></div>
+    <div id="body" class="account_transaction_history">
+        <div class="intro">
+            <h1>자금이체(매입매출전표)</h1><span></span>
+        </div>
+        
+        <div class="search_zone">
+            <table>
+                <tr>
+                    <th>합계</th>                
+                    <td colspan="5" style="text-align: right; font-size: 20px;">매출 4,650,000 | 매입 10,500,000</td>
+                </tr>                
+                <tr>
+                    <th>조회기간</th>
+                    <td>
+                        <input type="text" class="startDate" value=""> ~
+                        <input type="text" class="endDate" value="">&nbsp&nbsp&nbsp&nbsp
+                    </td>                    
+                    <th>매입매출 구분</th>
+                    <td>
+                        <input type="radio" name="type" id="all"><label for="all">전체</label>
+                        <input type="radio" name="type" id="in"><label for="in">매입</label>
+                        <input type="radio" name="type" id="out"><label for="out">매출</label>
+                        <input type="button" class="search_btn" value="조회">                         
+                    </td>
+                </tr>               
+            </table>
+        </div>
+
+        <!-- 이체기능 -->
+        <div class="transfer_wrap">
+            <input type="button" value="즉시이체" class="transfer_btn">
+        </div>
+
+        <!-- 거래내역 -->        
+        <div class="tableWrap">           
+            <table class="tbStyle1">
+                <thead>
+                    <th></th>
+                    <th>No</th>
+                    <th>거래일시</th>
+                    <th>구분</th>
+                    <th>거래처</th>
+                    <th>적요</th>
+                    <th>거래금액</th>
+                    <th>전표번호</th>                    
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="center"><input type="checkbox" value="" class=""></td>
+                        <td class="right">1</td>
+                        <td class="center">2023-07-15</td>
+                        <td class="center">출금</td>
+                        <td class="center">(주)라임</td>
+                        <td class="center">복리후생비</td>
+                        <td class="right">10,000</td> 
+                        <td class="center">AA000000-000-00</td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" value="" class=""></td>
+                        <td class="right">1</td>
+                        <td class="center">2023-07-15</td>
+                        <td class="center">출금</td>
+                        <td class="center">(주)라임</td>
+                        <td class="center">복리후생비</td>
+                        <td class="right">10,000</td> 
+                        <td class="center">AA000000-000-00</td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" value="" class=""></td>
+                        <td class="right">1</td>
+                        <td class="center">2023-07-15</td>
+                        <td class="center">출금</td>
+                        <td class="center">(주)라임</td>
+                        <td class="center">복리후생비</td>
+                        <td class="right">10,000</td> 
+                        <td class="center">AA000000-000-00</td>
+                    </tr>
+                    <tr>
+                        <td class="center"><input type="checkbox" value="" class=""></td>
+                        <td class="right">1</td>
+                        <td class="center">2023-07-15</td>
+                        <td class="center">출금</td>
+                        <td class="center">(주)라임</td>
+                        <td class="center">복리후생비</td>
+                        <td class="right">10,000</td> 
+                        <td class="center">AA000000-000-00</td>
+                    </tr>                                        
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div id="footer"></div>
+</body>
+</html>

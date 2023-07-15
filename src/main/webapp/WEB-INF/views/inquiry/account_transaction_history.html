@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라임ERP</title>
+    <link rel="stylesheet" href="/src/main/webapp/resources/css/common.css">
+    <script src="/src/main/webapp/resources/js/common.js"></script>    
+    <script src="/src/main/webapp/resources/js/jquery-3.6.0.min.js"></script>    
+</head>
+<script>
+    $(document).ready(function(){
+        $('#header').load("/src/main/webapp/WEB-INF/views/includes/header.html");
+        $('#side_menu').load("/src/main/webapp/WEB-INF/views/includes/side_menu.html");
+        $('#footer').load("/src/main/webapp/WEB-INF/views/includes/footer.html");
+    });
+</script>
+<body>
+    
+    <div id="header"></div>
+    <div id="side_menu"></div>
+    <div id="body" class="account_transaction_history">
+        <div class="intro">
+            <h1>예금계좌 거래내역조회</h1><span></span>         
+        </div>
+        
+        <div class="search_zone">
+            <!--<div class="top">
+                <input type="button" class="simple" value="간편조회">
+                <input type="button" class="calendar" value="달력조회"><br>
+            </div>-->
+
+            <div class="middle">
+                <ul class="custom_calendar">
+                    <li class="custom_1days">당일</li>
+                    <li class="custom_3days">3일</li>
+                    <li class="custom_1weeks">1주일</li>
+                    <li class="custom_1months">1개월</li>
+                    <li class="custom_3months">3개월</li>
+                    <li class="custom_6months">6개월</li>
+                </ul>
+                <ul class="monthly_calendar">
+                    <li class="month_1">1월</li>
+                    <li class="month_2">2월</li>
+                    <li class="month_3">3월</li>
+                    <li class="month_4">4월</li>
+                    <li class="month_5">5월</li>
+                    <li class="month_6">6월</li>
+                    <li class="month_7">7월</li>
+                    <li class="month_8">8월</li>
+                    <li class="month_9">9월</li>
+                    <li class="month_10">10월</li>
+                    <li class="month_11">11월</li>
+                    <li class="month_12">12월</li>
+                </ul>
+            </div>
+           
+            <!-- 조회일자 검색 -->            
+            <div class="bottom">
+                <select>
+                    <option>000000-00-000000</option>
+                </select>
+                <input type="text" class="startDate" value=""> ~
+                <input type="text" class="endDate" value="">
+                <input type="button" class="search_btn" value="조회"> 
+            </div>
+        </div>
+
+        <!-- 거래내역 -->        
+        <div class="tableWrap">
+            <p class="date_p">조회일자 기준일시 : <span class="date_span">2023-07-15 13:00:00</span></p>
+            <table class="tbStyle1">
+                <thead>
+                    <th>거래일시</th>
+                    <th>적요</th>
+                    <th>보낸분/받는분</th>
+                    <th>출금액</th>
+                    <th>입금액</th>
+                    <th>잔액</th>
+                    <th>메모</th>
+                    <th>거래점</th>                    
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="center">2023-07-15</td>
+                        <td class="center">기업</td>
+                        <td class="center">김라임</td>
+                        <td class="right">10,000</td>
+                        <td></td>
+                        <td class="right">300,000</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="center">2023-07-15</td>
+                        <td class="center">기업</td>
+                        <td class="center">김라임</td>
+                        <td class="right">10,000</td>
+                        <td></td>
+                        <td class="right">300,000</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="center">2023-07-15</td>
+                        <td class="center">기업</td>
+                        <td class="center">김라임</td>
+                        <td class="right">10,000</td>
+                        <td></td>
+                        <td class="right">300,000</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="center">2023-07-15</td>
+                        <td class="center">기업</td>
+                        <td class="center">김라임</td>
+                        <td class="right">10,000</td>
+                        <td></td>
+                        <td class="right">300,000</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="center">2023-07-15</td>
+                        <td class="center">기업</td>
+                        <td class="center">김라임</td>
+                        <td class="right">10,000</td>
+                        <td></td>
+                        <td class="right">300,000</td>
+                        <td></td>
+                        <td></td>
+                    </tr>                                                                             
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div id="footer"></div>
+</body>
+</html>

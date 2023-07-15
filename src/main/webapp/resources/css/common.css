@@ -1,20 +1,30 @@
 @charset "UTF-8";
 
 * {margin: 0; padding: 0; box-sizing: border-box;}
+:root{
+  --border-radius : 2px;
+  --color1 : #617787;
+}
 
 /*초기화*/
+html{padding:50px;}
 body,h1,h2,h3,h4,h5,h6,ul,p,img,input{margin: 0; padding: 0;}
 li{list-style: none;}
 a{text-decoration: none;  color: #000;}
 .hidden{position: absolute; left: -9999px;}
 
+/*태그 스타일*/
+input[type="button"]{cursor: pointer; outline: none; background-color: #eee; padding: 5px 15px; border-radius: var(--border-radius);
+  font-weight: bold; color: #333333; border: 1px solid #a3a3a3;}
+input[type="text"]{border: 1px solid #c0c0c0; padding: 3px; outline: none;}
+
 /*side_menu*/
 .sidebar{  
-  position: fixed;  top: 0;  left: 0;  width: 244px;   height: 100%;   background-color: #fff; 
+  position: fixed;  top: 0;  left: 50px;  width: 244px;   height: 100%;   background-color: #fff; 
   border-right: 1px solid #e3e3e3;}
 .sidebar .companyName{  
   display: block;
-  margin: 15px auto;
+  margin: 50px auto 0;
   text-align: center;
   background-color: #617787;
   border-radius: 3px;   width: 200px;  height: 200px;}
@@ -47,7 +57,7 @@ width: 55%; border-radius: 5px; background-color: #f8f8f8; position: relative;
 padding: 12px 0px; cursor: default; letter-spacing: -1.2px;
 box-shadow: 0 15px 30px 0 rgba(0,0,0,0.1)}
 
-#body .link_zone{margin-top: 5.5%; width: 100%; display: flex; justify-content: center; align-items: flex-end;}
+#body .link_zone{margin-top: 4.5%; width: 100%; display: flex; justify-content: center; align-items: flex-end;}
 #body .link_zone ul{}
 #body .link_zone ul li{float: left; margin-right: 125px;}
 #body .link_zone ul li a{display: inline-block;text-align: center;}
@@ -86,3 +96,71 @@ box-shadow: 0 15px 30px 0 rgba(0,0,0,0.1)}
   height: 71px;
   background: #e3e3e3;
 }
+
+#body .intro{letter-spacing: -1.8px; cursor: default; color:var(--color1)}
+#body .intro h1{    border-top: 2px solid var(--color1);
+  border-left: 2px solid var(--color1);
+  border-right: 2px solid var(--color1);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  display: inline-block; padding: 5px 25px;} 
+#body .intro span{display: inline-block; border-bottom: 2px solid var(--color1); 
+  border-image: linear-gradient(to right, var(--color1) 0%, white 100%);
+  border-image-slice: 1;
+  width: 800px; position: relative;  top: 13px;  left: 0px;}
+#body .intro{}
+ /* #body .intro h1::after{content: ''; display: inline-block; 
+    position: relative; right: 50px;
+    width: 500px; height: 2px; background:#617787;}  */
+/*#body .intro h1::before{content: ''; display: inline-block; 
+  position: relative; top: 5px;
+  width: 5px; height: 35px; background:#617787; /*background: linear-gradient(45deg, #617787, #d0dce5);}
+*/
+
+.search_zone{width: 90%; margin: 20px auto; text-align: center; border: 1px solid #eee; padding: 16px;
+box-shadow: 0px 5px 20px 0px #eee;}
+.search_zone .top input[type="button"]{font-size: 16px;}
+
+.search_zone .middle{margin: 6px 0px;  display: flex;  justify-content: center;}
+.search_zone .middle li{cursor: pointer; display: inline-block; padding:3px 9px; 
+  border: 1px solid #a3a3a3; margin: 1.5px; font-size: 13px;
+  background: linear-gradient(181deg, white 49%, #e3e3e3 88%);
+  border-radius: 2px;
+}
+.search_zone .middle .custom_calendar{margin-right: 5px;}
+.search_zone .middle .custom_calendar li{background: linear-gradient(181deg, #e4effa 49%, #bfcfdf 88%); }
+.search_zone .bottom{clear: both;}
+.search_btn{background: #333 !important; color: #fff !important; border: none !important;}
+.date_p{text-align: right; font-size: 13px;}
+
+.search_zone table{margin: 0 auto;}
+.search_zone table th{font-size: 18px; text-align: left; padding-right: 20px;}
+
+
+/*테이블 공통 디자인*/
+.tableWrap{width: 90%; margin: 0 auto; }
+.tbStyle1{background-color: #fff; width: 100%;border-collapse: collapse;}
+.tbStyle1 thead{position: sticky; top: 0;}
+.tbStyle1 thead th{border: 1px solid #ffffff; background: #959595; color: #fff; padding: 8px;}
+
+.tbStyle1 tbody{}
+.tbStyle1 tbody tr:nth-child(odd){background: #fafafa;}
+.tbStyle1 tbody td{border: 1px solid #cfcfcf; padding: 3px; font-size: 14px;}
+
+
+.tbStyle1 tfoot{}
+.tbStyle1 .center{text-align: center;}
+.tbStyle1 .right{text-align: right;}
+
+/*예금계좌 잔액조회*/
+.account_inquiry{}
+.account_inquiry h1{}
+
+/*예금계좌 거래내역조회*/
+.account_transaction_history{ margin: 0 auto;}
+
+/*이체결과 내역조회*/
+
+/*자금이체(매입매출전표)*/
+.transfer_wrap{width: 90%; margin: 18px auto; display: flex; flex-direction: row-reverse;}
+.transfer_wrap .transfer_btn{}
